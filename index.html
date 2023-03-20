@@ -52,13 +52,18 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	}
 	
 	function drawImage() {
-		var canvas=document.getElementById("myCanvas");
-		var context=canvas.getContext("2d");
+		var drawImage=document.getElementById("myCanvas");
+		var context=drawImage.getContext("2d");
 		var elephant=new Image();
 		elephant.src="https://rb.gy/bv6ypi";
 		elephant.onload=function() {
 			context.drawImage(elephant, 0,0); // when third button is clicked it will display a picture of an elephant
 		}
+	}
+	
+	function resetCanvas() {
+		var b_canvas=document.getElementById("myCanvas");
+		b_canvas.width=b_canvas.width;
 	}
 </script>
 
@@ -106,6 +111,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		<!-- Added a button feature for the second command -->
 	<p button class="w3-button w3-black w3-round" onclick="drawImage(); return false">Click to draw image</p>
 		<!-- Added a button feature for the third command -->
+	<p button class="w3-button w3-black w3-round" onclick="resetCanvas(); return false">Click to reset canvas</p>
+		<!-- Added a button feature to reset the canvas on click -->
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">

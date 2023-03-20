@@ -50,6 +50,16 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		ctx.font="30px Arial";
 		ctx.fillText("Tre Waiters", 50, 150); // when second button is clicked it will display my name in the canvas
 	}
+	
+	function drawImage() {
+		var canvas=document.getElementById("myCanvas");
+		var context=canvas.getContext("2d");
+		var elephant=new Image();
+		elephant.src="images./elephant.png";
+		elephant.onload=function() {
+			context.drawImage(elephant, 0,0); // when third button is clicked it will display a picture of an elephant
+		}
+	}
 </script>
 
 
@@ -94,6 +104,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		<!-- Added a button feature for the first command -->
 	<p button class="w3-button w3-black w3-round" onclick="fillText(); return false">Click to write name</p>
 		<!-- Added a button feature for the second command -->
+	<p button class="w3-button w3-black w3-round" onclick="drawImage(); return false">Click to draw image</p>
+		<!-- Added a button feature for the third command -->
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">

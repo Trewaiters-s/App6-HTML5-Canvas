@@ -43,6 +43,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var b_context=b_canvas.getContext("2d");
 		b_context.fillRect(50, 25, 150, 100); // when first button is clicked to draw a shape this will allow it to occur.
 	}
+	
+	function fillText() {
+		var fillText=document.getElementById("myCanvas");
+		var ctx=fillText.getContext("2d");
+		ctx.font="30px Arial";
+		ctx.fillText("Tre Waiters", 10, 50); // when second button is clicked it will display my name in the canvas
+	}
 </script>
 
 
@@ -85,7 +92,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		<!-- Adding styled created a solid black border around the canvas -->
 	<p button class="w3-button w3-black w3-round" onclick="draw_b(); return false">Click to draw on this canvas</p>
 		<!-- Added a button feature for the first command -->
-	
+	<p button class="w3-button w3-black w3-round" onclick="fillText(); return false">Click to write name</p>
+		<!-- Added a button feature for the second command -->
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">

@@ -46,23 +46,23 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 	function fillText() {
 		var fillText=document.getElementById("myCanvas");
-		var ctx=fillText.getContext("2d");
-		ctx.font="30px Arial";
-		ctx.fillText("Tre Waiters", 50, 150); // when second button is clicked it will display my name in the canvas
+		var ctx=fillText.getContext("2d"); 
+		ctx.font="30px Arial"; // changes font and size of text
+		ctx.fillText("Tre Waiters", 50, 150); // when second button is clicked it will display my name in the canvas on the respective coordinates
 	}
 	
 	function drawImage() {
-		var drawImage=document.getElementById("myCanvas");
+		var drawImage=document.getElementById("myCanvas"); // will make sure function loads in canvas
 		var context=drawImage.getContext("2d");
 		var elephant=new Image();
-		elephant.src="https://clipartix.com/wp-content/uploads/2018/03/elephant-outline-2018-43.png";
+		elephant.src="https://clipartix.com/wp-content/uploads/2018/03/elephant-outline-2018-43.png"; // image source from website
 		elephant.onload=function() {
-			context.drawImage(elephant, 200, 150, 56, 56); // when third button is clicked it will display a picture of an elephant
+			context.drawImage(elephant, 200, 150, 56, 56); // when third button is clicked it will display a picture of an elephant on the coordinates (200,150) and scale it down 56%
 		}
 	}
 	
 	function resetCanvas() {
-		var b_canvas=document.getElementById("myCanvas");
+		var b_canvas=document.getElementById("myCanvas"); // will make sure function resets only what's in canvas
 		b_canvas.width=b_canvas.width;
 	}
 </script>
